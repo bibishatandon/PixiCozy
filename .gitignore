@@ -1,0 +1,24 @@
+# Build output
+build/
+
+# VS Code settings
+.vscode/
+
+# Downloaded dependencies
+thirdparty/SDL2/
+thirdparty/SDL2_ttf/
+
+# Binaries
+*.exe
+*.dll
+
+# Object files
+*.obj
+*.o
+
+# Debug files
+*.pdb
+*.ilk
+
+# Logs
+*.log
