@@ -34,47 +34,44 @@ The project was developed to explore desktop application development, graphics p
 Install CMake:
 
 ```bash
-pip install cmake# ❀ PixiCozy
+pip install cmake
+```
 
-PixiCozy is a desktop pixel art editor built in C++ with SDL2 and SDL_ttf. It provides a simple workspace for drawing pixel art with layers, undo and redo support, zoom controls, custom file saving, and PNG export.
+Set up project dependencies:
 
-### Welcome Screen
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/setup_dependencies.ps1
+```
 
-![Welcome Screen](scpngreenshots/welcome-screen.)
-
-### Drawing Workspace
-
-![Drawing Workspace](screenshots/drawing-workspace.png)
-
-## Features
-
-- Pencil, Eraser, Bucket Fill, and Color Picker tools
-- Two-layer editing system
-- Layer visibility controls
-- Undo and Redo
-- Mouse-wheel zoom support
-- Save and load using a custom `.pxc` format
-- Export artwork as PNG
-- Recent files on the welcome screen
-- Custom pastel-themed interface
-
-## Tech Stack
-
-- C++
-- SDL2
-- SDL_ttf
-- stb_image_write
-- CMake
-
-## Build and Run
-
-### Requirements
-
-- MinGW GCC
-- Python
-- CMake
-
-Install CMake:
+Configure the project:
 
 ```bash
-pip install cmake
+cmake -G "MinGW Makefiles" -B build
+```
+
+Build the project:
+
+```bash
+cmake --build build
+```
+
+Run PixiCozy:
+
+```bash
+.\build\PixiCozy.exe
+```
+
+## Controls
+
+- Left click and drag: draw
+- Right click: pick color
+- Mouse wheel: zoom
+- Ctrl + mouse wheel: fine zoom
+- Ctrl + Z: undo
+- Ctrl + Y: redo
+
+```
+
+## Notes
+
+PixiCozy is intentionally lightweight and focused. The goal was to create a polished pixel art editor while gaining hands-on experience with graphics rendering, event-driven programming, custom UI development, and application architecture in C++.
